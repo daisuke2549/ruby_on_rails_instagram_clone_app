@@ -28,3 +28,6 @@ ActiveRecord::Schema.define(version: 2022_01_01_043644) do
   end
 
 end
+
+
+# rails consoleでコンソールを立ち上げてSQLは確認する

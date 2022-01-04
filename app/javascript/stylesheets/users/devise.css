@@ -13,7 +13,7 @@
   border: none;
 }
 
-.form-wrap{
+.form-wrap {
   max-width: 400px;
   width: 100%;
   margin: 50px auto;
@@ -25,7 +25,7 @@
   height: 56px;
   width: 180px;
   background-size: 160px;
-  background-size: 180px!important;
+  background-size: 180px !important;
 }
 
 .form-control {
@@ -43,10 +43,12 @@
   flex-direction: column;
   min-height: 100vh;
 }
-.form-group{
-  margin-top:10px;
+
+.form-group {
+  margin-top: 10px;
 }
-.actions{
+
+.actions {
   margin-top: 10px;
 }
 
@@ -62,4 +64,3 @@ footer {
     background-color: #fafafa;
   }
 }
-
