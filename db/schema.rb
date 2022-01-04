@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_01_01_043644) do
     t.string "name", null: false
     t.string "profile_photo"
     t.index ["email"], name: "index_users_on_email", unique: true
+    # unique制約 = カラムに重複した値を格納できなくなる。
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
