@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_01_043644) do
+ActiveRecord::Schema.define(version: 2022_01_16_070517) do
+
+  create_table "posts", force: :cascade do |t|
+    t.string "caption"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,11 +31,8 @@ ActiveRecord::Schema.define(version: 2022_01_01_043644) do
     t.string "name", null: false
     t.string "profile_photo"
     t.index ["email"], name: "index_users_on_email", unique: true
-    # unique制約 = カラムに重複した値を格納できなくなる。
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end
-
-
-# rails consoleでコンソールを立ち上げてSQLは確認する
