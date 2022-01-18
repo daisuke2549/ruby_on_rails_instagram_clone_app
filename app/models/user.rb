@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
 
-  # has_many :posts,dependent: :destory
+  # has_many :posts,:dependent,:destory
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
